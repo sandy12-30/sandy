@@ -1,0 +1,8 @@
+def magnify_data(data, magnification):
+    magnified_data = data
+    for i in range(magnification - 1):
+        magnified_data = np.r_[magnified_data, data]
+
+    return magnified_data
+  
+新的数据 = magnify_data(你的数据, 你要扩充几倍)

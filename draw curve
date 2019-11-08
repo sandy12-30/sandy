@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+d=np.load('./water.npy')
+#e=np.load('./val_acc.npy')
+#d=np.load('/mnt/c/Users/sd/PycharmProjects/Grad-CAM/venv/.npy')
+import PIL
+def draw_curve():
+    x = np.arange(0, 59)
+    plt.plot( x , d, color='red',label='train loss')
+    plt.plot(x, e, color='green',label='val loss')
+    plt.xlabel('image', fontsize=16)
+    plt.ylabel('anomal score', fontsize=16)
+    plt.savefig('./ anomal score.png')
+    plt.title('anomal score')
+    plt.show()
+
+if __name__ == "__main__":
+    draw_curve()
